@@ -1,0 +1,85 @@
+h2{
+    color: rgb(104, 104, 50);
+}
+
+
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(40, 31, 131);
+    padding-top: 5px;
+    box-sizing: border-box;
+    position:fixed;
+    top:0;
+    left:0;
+  }
+
+  ul{
+display: flex;
+  }
+
+  li{
+    list-style: none;
+  }
+  a{
+    display: block;
+    color: white;
+    margin-right:35px;
+  }
+  a:hover{
+    color: rgb(114, 101, 4)
+  }
+  .main {
+    background: linear-gradient(0deg,  #86fccfbc, #100664);
+    height: 100%;
+    width: 100%;
+      }
+
+  /*えーーー星を表示するコンテナのスタイルでぇす*/
+  .effect{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .star{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    animation: animate-star 3s linear;
+  }
+
+  .star-1{
+    background-image: url('img/star.png');
+  }
+
+  .star-2{
+    background-image: url('img/star2.png');
+  }
+
+  .star-3{
+    background-image: url('img/star3.png');
+  }
+
+  @keyframes animate-star{
+    0%{
+        opacity: 0;
+        top: 0;
+        transform: rotate(0);
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 100vh; /*スクラッチでいうところのx秒後にx地点につくように移動的な*/
+        transform: rotate(1080deg);
+
+    }
+  }
